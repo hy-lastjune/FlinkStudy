@@ -26,6 +26,7 @@ public class SteamUnBoundedWC0202 {
         KeyedStream<Tuple2<String, Long>, String> keyedStream = WordAndOneDs.keyBy(tuple -> tuple.f0);
         SingleOutputStreamOperator<Tuple2<String, Long>> resultDS = keyedStream.sum(1);
         resultDS.print();
+        System.out.println("hello git");
         env.execute();
     }
 }
